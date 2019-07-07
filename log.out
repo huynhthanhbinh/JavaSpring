@@ -1,0 +1,11 @@
+Spring configure with XML
+--------------------------------------------------
+Bean Language : core.lang.implement.Vietnamese@a7e666
+How to greet  : Xin chào
+How to say bye: Tạm biệt
+--------------------------------------------------
+Greeting      : Xin chào
+Bye           : Tạm biệt
+--------------------------------------------------
+Now is        : Sun Jul 07 20:18:00 ICT 2019
+App name      : Hello Spring App

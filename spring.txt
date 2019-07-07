@@ -1,0 +1,20 @@
+A - Beans definitions: multiple properties
+    A.1 class
+    A.2 name
+    A.3 scope: default is singleton (1 instance), prototype (multiple instances)
+    A.4 constructor-arg
+    A.5 properties
+    A.6 auto-wiring mode
+    A.7 lazy-initialization mode
+    A.8 initialization method
+    A.9 destruction method
+
+    <core.bean
+        id="" class="" scope="" lazy-init="" init-method="" destroy-method="" parent="" >
+
+    </core.bean>
+
+B - 3 methods to provide configuration metadata to the Spring Container
+    B.1 XML based configuration file  : ClassPathXmlApplicationContext
+    B.2 Annotation based configuration: AnnotationConfigApplicationContext
+    B.3 Java-based configuration
