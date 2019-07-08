@@ -88,3 +88,4 @@ misc.xml
 # End of https://www.gitignore.io/api/intellij
 
 target/
+log.out

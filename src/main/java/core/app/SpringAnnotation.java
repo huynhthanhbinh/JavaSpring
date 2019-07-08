@@ -7,6 +7,7 @@ import core.config.AppConfig;
 import core.lang.Language;
 import org.apache.log4j.Logger;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class SpringAnnotation {
@@ -16,11 +17,13 @@ public class SpringAnnotation {
         Logger logger = Logger.getLogger(SpringAnnotation.class.getName());
 
         // Application context load beans definitions and wire them together
-        ApplicationContext context = new
+        ConfigurableApplicationContext context = new
                 AnnotationConfigApplicationContext(AppConfig.class);
 
         logger.info("Spring configure with Annotation");
         logger.info(SEPARATE);
+
+        context.start();
 
         Language language = (Language) context.getBean("language");
         language.log("Bean Language : " + language);
@@ -45,5 +48,7 @@ public class SpringAnnotation {
         MyComponent myComponent = (MyComponent) context.getBean("myComponent");
 
         myComponent.showAppInfo();
+
+        context.stop();
     }
 }

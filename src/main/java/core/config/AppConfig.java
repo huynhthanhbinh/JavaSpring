@@ -1,6 +1,8 @@
 package core.config;
 
 import core.bean.GreetingService;
+import core.event.ContextStartEventHandler;
+import core.event.ContextStopEventHandler;
 import core.lang.Language;
 import org.springframework.context.annotation.*;
 
@@ -17,5 +19,15 @@ public class AppConfig {
     @Bean
     public GreetingService greetingService() {
         return new GreetingService();
+    }
+
+    @Bean("contextStartEventHandler")
+    public ContextStartEventHandler contextStartEventHandler() {
+        return new ContextStartEventHandler();
+    }
+
+    @Bean("contextStopEventHandler")
+    public ContextStopEventHandler contextStopEventHandler() {
+        return new ContextStopEventHandler();
     }
 }
