@@ -1,25 +1,24 @@
-package core.main;
+package core.app;
 
 import core.bean.ByeService;
 import core.bean.GreetingService;
 import core.bean.MyComponent;
-import core.config.AppConfig;
 import core.lang.Language;
 import org.apache.log4j.Logger;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class SpringAnnotation {
+public class SpringXml {
     private static final String SEPARATE = "--------------------------------------------------";
 
     public static void main(String[] args) {
-        Logger logger = Logger.getLogger(SpringAnnotation.class.getName());
+        Logger logger = Logger.getLogger(SpringXml.class.getName());
 
         // Application context load beans definitions and wire them together
         ApplicationContext context = new
-                AnnotationConfigApplicationContext(AppConfig.class);
+                ClassPathXmlApplicationContext("conversation.xml");
 
-        logger.info("Spring configure with Annotation");
+        logger.info("Spring configure with XML");
         logger.info(SEPARATE);
 
         Language language = (Language) context.getBean("language");
@@ -27,8 +26,8 @@ public class SpringAnnotation {
         language.log("How to greet  : " + language.getGreeting());
         language.log("How to say bye: " + language.getBye());
 
-
         logger.info(SEPARATE);
+
         GreetingService greetingService = (GreetingService) context
                 .getBean("greetingService"); // auto-generated
 
@@ -39,7 +38,6 @@ public class SpringAnnotation {
                 .getBean("byeService"); // auto-generated
 
         byeService.sayBye();
-
 
         logger.info(SEPARATE);
         MyComponent myComponent = (MyComponent) context.getBean("myComponent");

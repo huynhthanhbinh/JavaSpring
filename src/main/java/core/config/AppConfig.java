@@ -13,8 +13,9 @@ public class AppConfig {
     // Auto config field language by bean("language") definition in import class !
     private Language language;
 
+    // Another way to define service
     @Bean
     public GreetingService greetingService() {
-        return new GreetingService(language);
+        return new GreetingService();
     }
 }

@@ -8,9 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class GreetingService {
 
     @Autowired
+    //@Qualifier("chinese") // uncomment this line to run SpringQualifier
     private Language language;
 
+    public GreetingService() {}
 
+    // For xml-config
     public GreetingService(Language language) {
         this.language = language;
     }

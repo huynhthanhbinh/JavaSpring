@@ -8,9 +8,12 @@ import org.springframework.stereotype.Service;
 public class ByeService {
 
     @Autowired
+    //@Qualifier("chinese") // uncomment this line to run SpringQualifier
     private Language language;
 
+    public ByeService() {}
 
+    // For xml-config
     public ByeService(Language language) {
         this.language = language;
     }

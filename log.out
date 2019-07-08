@@ -1,11 +1,11 @@
 Spring configure with Annotation
 --------------------------------------------------
-Bean Language : core.lang.implement.English@69930714
+Bean Language : core.lang.implement.English@7c417213
 How to greet  : Hello
 How to say bye: Goodbye
 --------------------------------------------------
 Greeting      : Hello
 Bye           : Goodbye
 --------------------------------------------------
-Now is        : Mon Jul 08 08:06:40 ICT 2019
+Now is        : Mon Jul 08 15:29:36 ICT 2019
 App name      : Hello Spring App
