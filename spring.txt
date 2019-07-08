@@ -19,7 +19,17 @@ B - 2 methods to provide configuration metadata to the Spring Container
     B.2 Annotation based configuration: AnnotationConfigApplicationContext
 
 C - Annotations & Descriptions
-    @Required : bean property setter methods
-    @Autowired: bean property setter/non-setter methods, constructor
-    @Qualifier: along with @Autowired, specify which exact bean be wired
-    ...
+
+    @Lazy          : lazy class/ lazy component/ lazy autowired
+    @Configuration : mark the class contains beans config
+    @Bean          : declare that method a bean, by name, init() and destroy()
+    @Description   : describe the bean
+    @Component     : declare a class which object is component of another (Service, Repository, Controller)
+    @Repository    : usually as a database repository
+    @Service       : classed at the service layer
+    @Controller    : using more in MVC (Model - View - Controller)
+    @Scope         : define scope for a bean (singleton is default, prototype,...)
+    @Autowired     : bean property setter/non-setter methods, constructor
+    @Qualifier     : along with @Autowired, specify which exact bean be wired
+    @Value         : assign the value to the bean
+    @Test          : using to test our application
