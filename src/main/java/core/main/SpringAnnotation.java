@@ -3,7 +3,7 @@ package core.main;
 import core.bean.ByeService;
 import core.bean.GreetingService;
 import core.bean.MyComponent;
-import core.config.AppConfiguration;
+import core.config.AppConfig;
 import core.lang.Language;
 import org.apache.log4j.Logger;
 import org.springframework.context.ApplicationContext;
@@ -17,7 +17,7 @@ public class SpringAnnotation {
 
         // Application context load beans definitions and wire them together
         ApplicationContext context = new
-                AnnotationConfigApplicationContext(AppConfiguration.class);
+                AnnotationConfigApplicationContext(AppConfig.class);
 
         logger.info("Spring configure with Annotation");
         logger.info(SEPARATE);

@@ -14,7 +14,12 @@ A - Beans definitions: multiple properties
 
     </core.bean>
 
-B - 3 methods to provide configuration metadata to the Spring Container
+B - 2 methods to provide configuration metadata to the Spring Container
     B.1 XML based configuration file  : ClassPathXmlApplicationContext
     B.2 Annotation based configuration: AnnotationConfigApplicationContext
-    B.3 Java-based configuration
+
+C - Annotations & Descriptions
+    @Required : bean property setter methods
+    @Autowired: bean property setter/non-setter methods, constructor
+    @Qualifier: along with @Autowired, specify which exact bean be wired
+    ...

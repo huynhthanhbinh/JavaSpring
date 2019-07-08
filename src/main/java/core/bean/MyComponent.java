@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class MyComponent {
-    final Logger logger = Logger.getRootLogger();  
+    private final Logger logger = Logger.getRootLogger();
 
     @Autowired
     private MyRepository repository;

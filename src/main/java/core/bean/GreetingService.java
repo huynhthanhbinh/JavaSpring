@@ -2,9 +2,9 @@ package core.bean;
 
 import core.lang.Language;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-@Service
+//Alternative way of declaring service
+//@Service - see more in ByeService
 public class GreetingService {
 
     @Autowired
