@@ -1,0 +1,41 @@
+D - Web Application Framework
+
+    D.1 - What is Framework ?
+
+    Each framework has a mission, help you to accomplish things better & faster
+    Libraries are bunch of codes that can save your time by already implemented functionality...
+    In simple terms, you can call libraries, while frameworks call your code
+
+    D.2 - Web application framework ?
+
+    Is a framework designed to support the development of web applications
+    Web applications including web services, web resources, web APIs
+    Provide a standard way to build and deploy web applications on World Wide Web
+    Full-stack framework: ASP.NET, JavaEE, Ruby on Rails, Laravel, Zend,...
+
+    D.3 - Architectures ?
+
+    1. Model - View - Controller (MVC)
+    2. 3-tiers organization
+    3. Push-based vs. pull-based
+
+    D.4 - MVC model ?
+
+    (see MVC.png to know clearly the process of MVC)
+
+E - Building web applications with Spring MVC (chap7 - Springing into action 3rd)
+
+    Web-based applications ? --> primary focus, for many Java developers !
+    State management, Workflow, Validation are all important features need to be addressed
+    Spring's Web Framework is designed to help us address these concerns !
+
+    Spring moves requests around between a dispatcher servlet, handler mappings, controllers, view resolvers
+    Each components performs a specific purpose. Let's explore the lifecycle of a typical request !
+
+    Every time user click a link/ submit form... request goes to work !
+    Just like a delivery person, a request live to carry information from one to another
+    From the time it leaves the browser until it returns with a response, it'll make several stops !
+    Each time dropping off a bit of information and picking up some more.
+
+    When request leave the browser, it carry at least the requested URL
+    It may also carry additional data such as information submitted in a form by the user

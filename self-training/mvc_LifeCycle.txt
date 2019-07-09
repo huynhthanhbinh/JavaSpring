@@ -1,0 +1,53 @@
+0.  Servlet is used for create web application (at server side and create dynamic website)
+    Servlet is a web component and is deployed in server to create dynamic website
+    JSP stands for Java Server Pages or Java Scripting Preprocessor
+    JSP helps developers create dynamically generated web pages based on HTML, XML
+    JSP require a compatible web server with a Servlet container to deploy and run
+
+1.  first stop at dispatcher servlet.
+    Spring MVC funnels requests through a single front controller servlet
+    delegates responsibility for a request to other components of an application
+    to perform actual processing. DispatcherServlet is the front controller of Spring MVC
+
+    DispatcherServlet's job is to send request to a Spring MVC controller.
+    Controller is the component that process a request
+    Application may have SERVERAL controllers and
+    DispatcherServlet needs deciding which controller to send the request to !
+
+    consult (v) to ask for some advice, to get information (for deciding)
+
+2.  So the DispatcherServlet consults one or more handler mappings
+    to figure out where the request's next stop will be
+    The HandlerMapping will pay particular attention to the URL when making it decision
+
+    delegate (v) to give a particular job to someone else to do for you :)
+
+3.  Once appropriate controller has been chosen, DispatcherServlet send the request to controller
+    At the Controller, the request will drop off its information submitted by the user and
+    patiently wait while controller process the information
+    Controller delegates responsibility for the business logic to one or more service object
+
+4.  The Logic performed by a controller often results in some information
+    that needs to be carried back to the user and displayed in the browser.
+    These information is referred to Model !
+
+    But sending raw information to the user isn't sufficient !
+    It need to be formatted in a user-friendly format, typically HTML !
+    For that reason, information need to be given a view, typically a JSP !
+
+    Last thing the controller does is package up the model data
+    Then identify the name of a view that should render the output.
+    Then it sends the request along with the model and view name, back to the DispatcherServlet
+
+5.  The view name passed back to the DispatcherServlet doesn't directly identify a specific JSP
+    It only carries a logical name which will be used to lookup the actual view that will produce the result
+
+    The DispatcherServlet will consult a ViewResolver
+    to map the logical view name to a specific view implementation, may or may not a JSP !
+
+6.  Now the DispatcherServlet knows exactly which view will render the result
+    The request job is almost over.
+    Its final stop is at the view implementation where it delivers the model data
+    The request job is now finally done !
+    The view will use the model data to render output that will be carried back to the client !
+    (by the response object)

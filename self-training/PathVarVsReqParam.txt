@@ -1,0 +1,21 @@
+452
+
+@PathVariable is to obtain some placeholder from the URI
+@RequestParam is to obtain an parameter from the URI as well
+
+http://localhost:8080/MyApp/user/1234/invoices?date=12-05-2013
+
+gets the invoices for
+user : 1234
+on   : December 5th, 2013
+
+the controller method would look like:
+
+@RequestMapping(value="/user/{userId}/invoices", method = RequestMethod.GET)
+public List<Invoice> listUsersInvoices (
+
+    @PathVariable("userId")                         int  user,
+    @RequestParam(value = "date", required = false) Date dateOrNull ) {
+
+    ...
+}

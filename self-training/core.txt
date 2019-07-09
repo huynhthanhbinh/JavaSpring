@@ -1,4 +1,8 @@
+Huynh Thanh Binh (Richard)
+ELCA VN - BHT
+
 A - Beans definitions: multiple properties
+
     A.1 class
     A.2 name
     A.3 scope: default is singleton (1 instance), prototype (multiple instances)
@@ -9,14 +13,16 @@ A - Beans definitions: multiple properties
     A.8 initialization method
     A.9 destruction method
 
-    <core.bean
+    <bean
         id="" class="" scope="" lazy-init="" init-method="" destroy-method="" parent="" >
-
-    </core.bean>
+        ...
+    </bean>
 
 B - 2 methods to provide configuration metadata to the Spring Container
-    B.1 XML based configuration file  : ClassPathXmlApplicationContext
-    B.2 Annotation based configuration: AnnotationConfigApplicationContext
+
+    B.0 - Create contexts ??? -> (Configurable)ApplicationContext
+    B.1 - XML based configuration file  : ClassPathXmlApplicationContext
+    B.2 - Annotation based configuration: AnnotationConfigApplicationContext
 
 C - Annotations & Descriptions
 
@@ -24,6 +30,7 @@ C - Annotations & Descriptions
     @Configuration : mark the class contains beans config
     @Bean          : declare that method a bean, by name, init() and destroy()
     @Description   : describe the bean
+    @ComponentScan : scan and import all components relevant to its service
     @Component     : declare a class which object is component of another (Service, Repository, Controller)
     @Repository    : usually as a database repository
     @Service       : classed at the service layer

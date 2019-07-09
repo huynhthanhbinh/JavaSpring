@@ -1,0 +1,8 @@
+@ResponseStatus
+
+Eg.
+@ExceptionHandler(IllegalArgumentException.class)
+@ResponseStatus(HttpStatus.BAD_REQUEST)
+void onIllegalArgumentException(IllegalArgumentException exception) {
+    // ...
+}

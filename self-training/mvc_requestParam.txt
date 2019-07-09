@@ -1,0 +1,20 @@
+@RequestParam
+
+for accessing HTTP request parameters
+
+@RequestMapping
+Vehicle getVehicleByParam(@RequestParam("id") long id) {
+    // ...
+}
+
+we can specify an injected value
+when Spring finds no or empty value in the request
+To achieve this, we have to set the defaultValue argument.
+
+@RequestMapping("/buy")
+Car buyCar(@RequestParam(defaultValue = "5") int seatCount) {
+    // ...
+}
+
+Besides parameters, there are other HTTP request parts we can access:
+cookies and headers : @CookieValue and @RequestHeader

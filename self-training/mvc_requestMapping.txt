@@ -1,0 +1,47 @@
+@RequestMapping
+
+marks request handler methods inside @Controller classes, configure using:
+
+(Frequently use)
++ path/name/value : which URL method is mapped to ?
++ method          : compatible HTTP methods
+
+(Sometimes use)
++ params          : filters requests based on presence, absence, or value of HTTP parameters
++ headers         : filters requests based on presence, absence, or value of HTTP headers
++ consumes        : which media types the method can consume in the HTTP request body
++ produces        : which media types the method can produce in the HTTP response body
+
+above : ↑
+below : ↓
+
+Eg.
+@Controller
+class VehicleController {
+
+    @RequestMapping(value = "/vehicles/home", method = RequestMethod.GET)
+    String home() {
+        return "home";
+    }
+}
+
+Eg.
+@Controller
+@RequestMapping(value = "/vehicles", method = RequestMethod.GET)
+class VehicleController {
+
+    @RequestMapping("/home")
+    String home() {
+        return "home";
+    }
+}
+
+2 example above do the same thing !!!
+return "home" from controller when URL is "/vehicles/home", method: GET
+
+Moreover :
+HTTP request methods : GET, POST, PUT, DELETE, PATCH
+
+Therefore:
+@GetMapping, @PostMapping, @PutMapping, @DeleteMapping, @PatchMapping (-> X)
+    -> @RequestMapping(value = "/..." method = RequestMethod.X)

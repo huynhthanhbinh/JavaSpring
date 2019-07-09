@@ -1,0 +1,27 @@
+@PathVariable
+
+Indicate that a method argument is bound to a URI template variable
+
+Specify the URI template with the @RequestMapping annotation
+
+Eg.
+
+@RequestMapping("/{id}")
+Vehicle getVehicle(@PathVariable("id") long id) {
+    // ...
+}
+
+If the name of the part in the template matches the name of the method argument
+we don’t have to specify it in the annotation, so we can simplify as :
+
+@RequestMapping("/{id}")
+Vehicle getVehicle(@PathVariable long id) {
+    // ...
+}
+
+Moreover, we can mark a path variable optional by setting the argument required to false
+
+@RequestMapping("/{id}")
+Vehicle getVehicle(@PathVariable(required = false) long id) {
+    // ...
+}

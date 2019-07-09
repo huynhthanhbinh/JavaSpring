@@ -1,0 +1,25 @@
+@RequestBody
+
+maps the HttpRequest body to a transfer or domain object
+enabling automatic deserialization of the inbound HttpRequest body onto a Java object
+
+Eg.
+
+public class LoginForm {
+    private String username;
+    private String password;
+    // ...
+}
+
+@PostMapping("/request")
+public ResponseEntity postController(
+    @RequestBody LoginForm loginForm) {
+
+    exampleService.fakeAuthenticate(loginForm);
+
+    return ResponseEntity.ok(HttpStatus.OK);
+}
+
+Spring automatically deserializes the JSON into a Java
+By default, the type we annotate with the @RequestBody annotation
+must correspond to the JSON sent from our client-side controller

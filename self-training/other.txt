@@ -1,0 +1,40 @@
+F - Basic knowledge
+
+    @EnableWebMvc
+    @Configuration  :
+
+    @Inject         :
+    @Controller     :
+
+
+    Resource-oriented Controller !
+
+    DispatcherServlet consults one or more handler mappings
+    In order to know which controller to dispatch a request to
+    Spring comes with a handful of handler mapping implementations to choose from, including
+
+     BeanNameUrlHandlerMapping
+        Maps controllers to URLs that are based on the controllers’ bean names.
+
+     ControllerBeanNameHandlerMapping
+        Similar to BeanNameUrlHandlerMapping,
+        In this case, the bean names are n’t required to follow URL conventions.
+
+     ControllerClassNameHandlerMapping
+        Maps controllers to URLs by using the controllers’ class names as the basis for their URLs.
+
+     DefaultAnnotationHandlerMapping
+        Maps request to controller and controller methods that are annotated with @RequestMapping.
+
+     SimpleUrlHandlerMapping
+        Maps controllers to URLs using a property collection defined in the Spring application context.
+
+G - Spring Web Annotations : package  "  org.springframework.web.bind.annotation  "
+
+    0. @Controller
+    1. @RequestMapping
+    2. @PathVariable
+    3. @RequestParam
+    4. @PathVariable vs @RequestParam
+    5. @RequestBody
+    6. @ResponseBody
